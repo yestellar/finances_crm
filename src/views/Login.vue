@@ -54,6 +54,7 @@
 
 <script>
 import {email, required, minLength} from 'vuelidate/lib/validators'
+import messages from '@/utils/messages'
 
 export default {
   name: 'login',
@@ -76,6 +77,11 @@ export default {
         password: this.password
       }
       this.$router.push('/')
+    }
+  },
+  mounted() {
+    if (messages[this.$route.query.message]) {
+      this.$message(messages[this.$route.query.message])
     }
   }
 }

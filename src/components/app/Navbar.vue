@@ -49,7 +49,7 @@ export default {
   }),
   methods: {
     logout() {
-      console.log('Logout')
+      this.$store.dispatch('logout')
       this.$router.push('/login?message=logout')
     }
   },

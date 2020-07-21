@@ -24,7 +24,7 @@ Vue.filter('currency', currencyFilter)
 Vue.component('Loader', Loader)
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBCtu3hGp_i3Qg6ftGhVx5LcuqAGVY6Rwg",
+    apiKey: 'AIzaSyBCtu3hGp_i3Qg6ftGhVx5LcuqAGVY6Rwg',
     authDomain: "vue-finance-crm-3fc1e.firebaseapp.com",
     databaseURL: "https://vue-finance-crm-3fc1e.firebaseio.com",
     projectId: "vue-finance-crm-3fc1e",

@@ -55,6 +55,9 @@ export default {
     title: {required},
     limit: {minValue: minValue(50)}
   },
+  mounted() {
+    M.updateTextFields()
+  },
   methods: {
     async submitHandler() {
       if (this.$v.$invalid) {
@@ -62,7 +65,7 @@ export default {
         return
       }
       try {
-        const category =  this.$store.dispatch('createCategory', {
+        const category = await this.$store.dispatch('createCategory', {
           title: this.title,
           limit: this.limit
         })
@@ -74,9 +77,6 @@ export default {
       } catch (e) {}
 
     }
-  },
-  mounted() {
-    M.updateTextFields()
   }
 }
 </script>

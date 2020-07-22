@@ -42,7 +42,7 @@
           <span
             v-if="$v.limit.$dirty && !$v.limit.minValue"
             class="helper-text invalid"
-          >Минимальная величина {{$v.limit.$params.minValue.min}}</span>
+          >Minimal value {{$v.limit.$params.minValue.min}}</span>
         </div>
 
         <button class="btn waves-effect waves-light" type="submit">
@@ -112,7 +112,9 @@ export default {
     this.select = M.FormSelect.init(this.$refs.select)
   },
   beforeDestroy() {
-    this.select.destroy()
+    if (this.select && this.select.destroy) {
+      this.select.destroy()
+    }
   }
 }
 </script>

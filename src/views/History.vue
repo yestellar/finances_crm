@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <div class="page-title">
-      <h3>История записей</h3>
+      <h3>Records history</h3>
     </div>
 
     <div class="history-chart">
@@ -39,7 +39,7 @@ export default {
         typeText: record.type === 'income' ? 'Income' : 'Outcome',
       }
     })
-    
+
     this.loading = false
   },
   components: {

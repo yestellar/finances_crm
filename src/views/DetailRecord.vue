@@ -1,19 +1,23 @@
 <template lang="html">
   <div>
-    <div>
+    <Loader v-if="loading" />
+    <div v-else-if="record">
       <div class="breadcrumb-wrap">
-        <a href="/history" class="breadcrumb">История</a>
-        <a class="breadcrumb">
-          Расход
+        <router-link to="/history" class="breadcrumb">History</router-link>
+        <a class="breadcrumb" @click.prevent="">
+          {{record.type === 'income' ? 'Income' : 'Outcome'}}
         </a>
       </div>
       <div class="row">
         <div class="col s12 m6">
-          <div class="card red">
+          <div class="card" :class="{
+            'red': record.type === 'outcome',
+            'green': record.type === 'income'
+            }">
             <div class="card-content white-text">
-              <p>Описание:</p>
-              <p>Сумма:</p>
-              <p>Категория:</p>
+              <p>Description: {{record.description}}</p>
+              <p>Amount: {{record.amount | currency}}</p>
+              <p>Category: {{record.categoryName}}</p>
 
               <small>12.12.12</small>
             </div>
@@ -21,12 +25,29 @@
         </div>
       </div>
     </div>
+    <p class="center" v-else>Record with id="{{$route.params.is}} is not found"</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DetailRecord'
+  name: 'detail',
+  data: () => ({
+    record: null,
+    loading: true
+  }),
+  async mounted() {
+    const id = this.$route.params.id
+    const record = await this.$store.dispatch('fetchRecordById', id)
+    const category = await this.$store.dispatch('fetchCategoryById', record.categoryId)
+
+    this.record = {
+      ...record,
+      categoryName: category.title
+    }
+
+    this.loading = false
+  }
 }
 </script>
 

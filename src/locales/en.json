@@ -1,5 +1,13 @@
 {
   "ProfileTitle": "Profile",
+  "RecordTitle": "New record",
+  "CategoriesTitle": "Categories",
+  "RegisterTitle": "Registration",
+  "DetailTitle": "Record details",
+  "HistoryTitle": "History",
+  "HomeTitle": "Home",
+  "LoginTitle": "Login",
+  "PlanningTitle": "Planning",
   "Name": "Name",
   "Message_EnterName": "Enter name",
   "Update": "Update",

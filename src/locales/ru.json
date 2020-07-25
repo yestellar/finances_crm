@@ -1,5 +1,13 @@
 {
   "ProfileTitle": "Профиль",
+  "RecordTitle": "Новая запись",
+  "CategoriesTitle": "Категории",
+  "RegisterTitle": "Регистрация",
+  "DetailTitle": "Детали записи",
+  "HistoryTitle": "История",
+  "HomeTitle": "Главная",
+  "LoginTitle": "Логин",
+  "PlanningTitle": "Планирование",
   "Name": "Имя",
   "Message_EnterName": "Введите имя",
   "Update": "Обновить",

@@ -1,12 +1,12 @@
 <template lang="html">
   <div class="record">
     <div class="page-title">
-      <h3>New record</h3>
+      <h3>{{ "Menu_NewRecord" | localize }}</h3>
     </div>
 
     <Loader v-if="loading" />
 
-    <p class="center" v-else-if="!categories.length">No categories yet. <router-link to="/categories">Add new category</router-link></p>
+    <p class="center" v-else-if="!categories.length">{{ "NoRecords" | localize}} <router-link to="/categories">{{"AddFirst" | localize }}</router-link></p>
 
     <form v-else class="form" @submit.prevent="submitHandler">
       <div class="input-field" >
@@ -17,7 +17,7 @@
             :value="c.id"
           >{{c.title}}</option>
         </select>
-        <label>Choose a category</label>
+        <label>{{ "SelectCategory" | localize }}</label>
       </div>
 
       <p>
@@ -29,7 +29,7 @@
               value="income"
               v-model="type"
           />
-          <span>Income</span>
+          <span>{{"Income" | localize}}</span>
         </label>
       </p>
 
@@ -42,7 +42,7 @@
               value="outcome"
               v-model="type"
           />
-          <span>Outcome</span>
+          <span>{{"Outcome" | localize}}</span>
         </label>
       </p>
 
@@ -53,11 +53,11 @@
             v-model.number="amount"
             :class="{invalid: $v.amount.$dirty && !$v.amount.minValue}"
         >
-        <label for="amount">Amount</label>
+        <label for="amount">{{ "Amount" | localize }}</label>
         <span
           v-if="$v.amount.$dirty && !$v.amount.minValue"
           class="helper-text invalid"
-        >Minimal value {{$v.amount.$params.minValue.min}}</span>
+        >{{"Message_MinLength" | localize}} {{$v.amount.$params.minValue.min}}</span>
       </div>
 
       <div class="input-field">
@@ -67,15 +67,15 @@
             v-model="description"
             :class="{invalid: $v.description.$dirty && !$v.description.required}"
         >
-        <label for="description">Description</label>
+        <label for="description">{{ "Description" | localize }}</label>
         <span
           v-if="$v.description.$dirty && !$v.description.required"
           class="helper-text invalid"
-        >Enter a description</span>
+        >{{ "Message_EnterDescription" | localize }}</span>
       </div>
 
       <button class="btn waves-effect waves-light" type="submit">
-        Создать
+        {{ "Create" | localize }}
         <i class="material-icons right">send</i>
       </button>
     </form>

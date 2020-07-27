@@ -25,8 +25,8 @@ export default {
       {title: localizeFilter('Menu_Bill'), url: '/'},
       {title: localizeFilter('Menu_History'), url: '/history'},
       {title: localizeFilter('Menu_Planning'), url: '/planning'},
-      {title: localizeFilter('Menu_Record'), url: '/record'},
-      {title: localizeFilter('Menu_Category'), url: '/categories'}
+      {title: localizeFilter('Menu_NewRecord'), url: '/record'},
+      {title: localizeFilter('Menu_Categories'), url: '/categories'}
     ]
   })
 }

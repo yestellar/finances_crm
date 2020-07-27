@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <div class="page-title">
-      <h3>Records history</h3>
+      <h3>{{'History_Title' | localize}}</h3>
     </div>
 
     <div class="history-chart">
@@ -10,7 +10,7 @@
 
     <Loader v-if="loading"/>
 
-    <p class="center" v-else-if="!records.length">No records yet</p>
+    <p class="center" v-else-if="!records.length">{{"NoRecords" | localize}}<router-link to="/record">{{'AddFirst' | localize}}</router-link></p>
 
     <section v-else>
       <HistoryTable :records="items" />

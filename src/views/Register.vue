@@ -57,13 +57,13 @@
             class="btn waves-effect waves-light auth-submit"
             type="submit"
         >
-          Зарегистрироваться
+          Register
           <i class="material-icons right">send</i>
         </button>
       </div>
 
       <p class="center">
-        Уже есть аккаунт?
+        Already have an account?
         <router-link to="/login">Sign in</router-link>
       </p>
     </div>

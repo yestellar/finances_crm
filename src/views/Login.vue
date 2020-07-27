@@ -60,7 +60,7 @@ export default {
   name: 'login',
   metaInfo() {
     return {
-      title: this.$title('ProfileTitle')
+      title: this.$title("Login")
     }
   },
   data: () => ({

@@ -77,7 +77,7 @@ export default {
   name: 'register',
   metaInfo() {
     return {
-      title: this.$title('RegisterTitle')
+      title: this.$title("Register")
     }
   },
   data: () => ({

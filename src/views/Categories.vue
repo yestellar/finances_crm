@@ -28,7 +28,7 @@ export default {
   name: 'categories',
   metaInfo() {
     return {
-      title: this.$title('CategoriesTitle')
+      title: this.$title("Menu_Categories")
     }
   },
   data: () => ({

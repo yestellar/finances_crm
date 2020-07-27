@@ -32,7 +32,7 @@ export default {
   name: 'home',
   metaInfo() {
     return {
-      title: this.$title('HomeTitle')
+      title: this.$title("Menu_Bill")
     }
   },
   data: () => ({

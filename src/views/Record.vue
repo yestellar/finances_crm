@@ -90,7 +90,7 @@ export default {
   name: 'record',
   metaInfo() {
     return {
-      title: this.$title('RecordTitle')
+      title: this.$title("Menu_NewRecord")
     }
   },
   data: () => ({

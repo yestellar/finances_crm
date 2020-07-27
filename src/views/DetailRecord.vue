@@ -34,7 +34,7 @@ export default {
   name: 'detail',
   metaInfo() {
     return {
-      title: this.$title('DetailTitle')
+      title: this.$title("Menu_History")
     }
   },
   data: () => ({

@@ -1,4 +1,7 @@
-# finances_crm
+# financial_crm
+
+### Preview
+![](img/preview.gif)
 
 ## Project setup
 ```
